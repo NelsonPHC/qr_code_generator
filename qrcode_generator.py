@@ -34,7 +34,7 @@ def generate_qr_code_app(url, output_filename="qr_code.png"):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Generate a QR code from a URL.")
     parser.add_argument("--url", help="The URL to generate the QR code for.")
     parser.add_argument("--output", default="qr_code.png",
@@ -54,3 +54,7 @@ if __name__ == "__main__":
             exit() # Terminate if no URL is provided interactively
 
     generate_qr_code_app(target_url, args.output)
+
+
+if __name__ == "__main__":
+    main()
